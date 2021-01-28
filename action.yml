@@ -1,0 +1,13 @@
+name: "Gradle publish package"
+description: "Publish a package for a Gradle project"
+
+inputs:
+  tasks:
+    description: "Gradle tasks/commands to run (including any command line switches/arguments)"
+    required: false
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.tasks }}
