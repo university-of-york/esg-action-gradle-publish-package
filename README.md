@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: university-of-york/esg-action-gradle-publish-package
+      - uses: university-of-york/esg-action-gradle-publish-package@1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
@@ -41,7 +41,7 @@ By default, this action will run the tasks
 Optionally, you can specify an alternative list of Gradle tasks to run:
 
 ```
-      - uses: university-of-york/esg-action-gradle-publish-package
+      - uses: university-of-york/esg-action-gradle-publish-package@1.0.0
         with:
           tasks: clean build publish
 ```
